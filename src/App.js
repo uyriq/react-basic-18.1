@@ -25,8 +25,11 @@ Message.propTypes = {
 
 const RepliedMessage = ({ message }) => <Message message={message} className={'replied-message'} />;
 
+/* {Ваш код здесь} */
 RepliedMessage.propTypes = {
-  /* {Ваш код здесь} */
+
+    message: messagePropTypes.isRequired,
+    className: PropTypes.string
 };
 
 const Chat = ({ thread }) => (
@@ -39,8 +42,15 @@ const Chat = ({ thread }) => (
   </div>
 );
 
+/* {Ваш код здесь} */
 Chat.propTypes = {
-  /* {Ваш код здесь} */
+    thread: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        user: PropTypes.string.isRequired,
+        replyTo: PropTypes.number,
+        text: PropTypes.string.isRequired
+    })).isRequired,
 };
 
 export default class App extends React.Component {
