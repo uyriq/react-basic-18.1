@@ -1,18 +1,37 @@
-body {
-  background-color: #15151a;
+.App {
+  padding: 40px;
+  max-width: 50%;
+  margin: 0 auto;
 }
 
-.App {
+@media screen and (max-width: 800px) {
+  .App {
+    max-width: 100%;
+  }
+}
+
+body {
   font-family: sans-serif;
-  padding: 40px;
-  width: 50%;
-  height: 700px;
-  margin: 0 auto;
+  background-color: #15151A;
   color: #fff;
 }
 
-@media (max-width: 1000px) {
-  .App {
-    width: 90%;
-  }
+h3,
+p {
+	padding: 0;
+	margin: 0;
+}
+
+.replied-message {
+	padding: 16px;
+	border-left: 2px solid #6c84ff;
+	font-size: 0.8rem;
+	margin-bottom: 16px;
+}
+
+.message {
+	padding: 16px;
+	margin-bottom: 20px;
+	background: #242427;
+	border-radius: 16px;
 }
