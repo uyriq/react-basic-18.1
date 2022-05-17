@@ -47,9 +47,9 @@ Chat.propTypes = {
     thread: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number.isRequired,
-        user: PropTypes.string.isRequired,
+        message: PropTypes.messagePropTypes,
         replyTo: PropTypes.number,
-        text: PropTypes.string.isRequired
+        repliedMessage:PropTypes.RepliedMessage 
     })).isRequired,
 };
 
